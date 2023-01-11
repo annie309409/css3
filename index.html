@@ -10,18 +10,77 @@
     <!--reset css로 보면됨-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script>
-      let ani = 26;
-      let lev5 = 0;
-      let lev3 = 0;
-      let lev2 = 0;
+    <style>
+      span{
+        background-color: #000000;
+        color: #fff;
+      }
+      p span{
+        color: orange;
+      }
+      p>span{
+        color: red;
+      }
+      ul>li:first-child{
+        color: orange;
+      }
+      ul>li:nth-of-type(1){
+        color: purple;
+      }
+      ul>li:nth-of-type(1)>ul>li{
+        color: crimson;
+      }
 
-      (ani % 5 === 0 ) ? lev5= ani/5 :  lev5=ani/5; ani=ani%5;
-      console.log(lev5);
+      span, li{
+        background-color: ivory;
+      }
+      span:nth-of-type(2){
 
-    </script>
+      }
+      p{
+        background-color: #ffcc00;
+      }
+
+      input[type='radio']:checked + label{
+        color: orange;
+        font-size: 25px;
+      }
+
+      input[type='radio']:checked {
+        box-shadow: 1px 1px 3px #fc0;
+      }
+
+
+    </style>
   </head>
   <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa mollitia voluptate! Delectus deserunt eius est ex facilis ipsum, iste quaerat quod rem repellendus saepe ullam, voluptates. Corporis, possimus, sint.
+    </p>
+    <p>
+      속에 품고 가진 끝까지 없는 않는 것이다. 그들은 긴지라 바로 우리 얼마나 있는가? 아름답고 인간이 힘차게 풍부하게 풀이 설산에서 그와 이상을 보라. 웅대한 청춘 그들에게 옷을 유소년에게서 용감하고 고행을 말이다. 피고, 따뜻한 안고, 끓는다. 꽃 오아이스도 사랑의 불어 그들은 사라지지 행복스럽고 우리 피가 힘있다. 있을 무한한 따뜻한 끝까지 충분히 교향악이다. 굳세게 밝은 속에서 말이다. 눈이 옷을 우리의 소리다.이것은 위하여서. 봄날의 평화스러운 그들에게 꽃 있는 찾아 같지 방지하는 아름다우냐? 있음으로써 무엇을 발휘하기 같이, 창공에 주는 보내는 심장의 유소년에게서 운다.
+
+      <span>청춘이 불러 청춘의 소리다.이것은 인생의 것은 교향악이다.<span> 찾아 풍부하게 인간은 청춘의 인생에 얼마나 이상 약동하다.</span> 피고, 실로 못할 그들을 인간에 풀이 가치를 있는 할지라도 봄바람이다.</span> 같으며, 이 인간의 천고에 보이는 쓸쓸한 끓는 어디 시들어 사막이다. 설산에서 갑 때에, 오아이스도 기관과 부패뿐이다. 오아이스도 위하여 보는 끓는 얼음이 유소년에게서 커다란 가진 피어나는 부패뿐이다. 싹이 풍부하게 오아이스도 풍부하게 그리하였는가? 위하여서 되는 수 것이다. 이상 들어 어디 얼마나 있는 유소년에게서 것이다.
+
+      있을 영원히 우리의 행복스럽고 이것이다.<span> 힘차게 스며들어 끓는 뿐이다. 우리는 것은 용감하고 봄바람을 이것이야말로 것이다.</span> 인간은 생명을 피부가 얼마나 있으랴? 하는 따뜻한 이상이 인간은 충분히 우는 있는가?
+      <span>밥을 가지에 동산에는 이상, 약동하다. 보배를 되려니와, 구하지 속에 관현악이며, 스며들어 우는 불어 전인 교향악이다.</span><span>  꽃 없으면, 얼음이 무엇을 목숨이 얼마나 </span>풍부하게 것은 목숨을 있는가? 타오르고 이 아름답고 미인을 커다란 풀이 부패를 약동하다. 위하여서, 위하여 수 우리의 어디 그들의 이상은 같이, 듣는다. 그들은 청춘 노년에게서 이상 이것은 청춘 대중을 사막이다.
+    </p>
+    <ul>
+      <li>한식
+        <ul>
+          <li>비빔밥</li>
+          <li>비빔면</li>
+        </ul>
+      </li>
+      <li>라면</li>
+      <li>돈까스</li>
+    </ul>
+    <form action="">
+      <div>
+        <input type="radio" id="female" name="gender"> <label for="female">여자</label>
+        <input type="radio" id="male" name="gender"> <label for="male">남자</label>
+      </div>
+    </form>
 
   </body>
 </html>
