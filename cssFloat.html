@@ -5,6 +5,7 @@
     <title>CSS float 관련 속성</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
   <style>
     .box1,.box2,.box3,.box4,.box5,.box6{
       width: 200px;
@@ -71,6 +72,7 @@
       text-align: center;
     }
 
+
     /*테이블 꾸미기*/
     #tb5 {border-top: 3px solid black; border-bottom: 3px solid black;}
     #tb5 th,#tb5 td{ padding: 10px 50px; border: 0}
@@ -84,6 +86,69 @@
     #tb5:hover tr:hover{
       color: #fff;
        background-color: #b3d4fc;
+    }
+    div.box7{
+      width: 300px;
+      height: 300px;
+      box-sizing: border-box;
+      background-color: #fc0;
+      float: left;
+    }
+    div.article1, div.article2{
+      width: 600px; height: 100px;
+      float: left;
+    }
+    .article1{
+      background-color: #0a53be;
+      color: #fff;
+    }
+    .article2{
+      background-color: #20c997;
+    }
+    .article2::after{
+      content: '';
+      clear: both;
+      display: block;
+    }
+    .wrapper{
+      width: 100%;
+    }
+    
+    /* 레이아웃 실습*/
+    #wrapper2{
+      width: 960px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+    header{
+      background-color: #ffc107;
+      height: 100px;}
+    div.content::after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    nav, aside{
+      width: 20%;
+      height: 500px;
+    }
+    main{
+      width: 60%;
+      background-color: #b3d4fc;
+      float: left;
+      height: 500px;
+    }
+    nav{
+      background-color: ivory;
+      float: left;
+    }
+    aside{
+      float: right;
+      background-color: #6f42c1;
+    }
+    footer{
+      height: 100px;
+      background-color: #75b798;
     }
   </style>
 </head>
@@ -162,8 +227,32 @@
   <p>한편,border-box속성을 이용하면 블록요소의 크기를 계산할 때 </p>
 
   <h2>float속성</h2>
+  <p>일반적인 레이아웃 흐름은 마크업이 작성된 순서에 따라 요소는 위에서 아래로 , </p>
+  <img src="./img/flaot01.png" alt="">
+  <img src="./img/flaot02.png" alt="">
 
+  <div></div>
+  <div class="clearfix wrapper">
+    <div class="box7"></div>
+    <div class="article1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque esse expedita fuga fugit, hic laudantium magnam nostrum pariatur perspiciatis placeat praesentium quaerat quis quos recusandae repellat repudiandae sequi vitae.
+    </div><div class="article2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloremque esse expedita fuga fugit, hic laudantium magnam nostrum pariatur perspiciatis placeat praesentium quaerat quis quos recusandae repellat repudiandae sequi vitae.
+    </div>
+  </div>
 
-
+  <h2>clear</h2>
+  <p>float 속성이 지정된 요소는 문서의 일반적인 흐름에서 벗어난 상태이기때문에 뒤를 따르는 후속요소들이 이상한 모습으로 나옴 </p>
+  <p>이러한 문제를 해결하기위해서 clear 속성을 적용해 특정 요소 이후로는 float의 영향을 받지않음 </p>
+    
+  <div id="wrapper2">
+    <header>header</header>
+    <div class="content">
+      <nav>nav</nav>
+      <aside>aside</aside>
+      <main>article</main>
+    </div>
+    <footer>footer</footer>
+  </div>
 </body>
 </html>
