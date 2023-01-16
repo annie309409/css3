@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS float 관련 속성</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+  <style>
+    .box1,.box2,.box3,.box4,.box5,.box6{
+      width: 200px;
+      height: 100px;}
+    /*크기정상*/
+    .box1{
+      background-color: #ff0000;
+    }
+    /*테두리 여백 설정시 크기늘어남*/
+    .box2{
+      border: 5px solid black;
+      padding: 20px;
+      background-color: #ffcc00;
+    }
+    /*테두리, 마진설정- 크기늘어남*/
+    .box3{
+      background-color: orange;
+      margin: 40px;
+      border: 5px solid black;
+    }
+    /*크기고정*/
+    .box4{
+      background-color: #0dcaf0;
+      box-sizing: border-box;
+      border: 10px solid red;
+      padding: 20px;
+    }
+    .box5{
+      background-color: #0dcaf0;
+      box-sizing: border-box;
+      border: 10px solid red;
+      padding: 20px;
+    }
+    .box6{
+      background-color: #0dcaf0;
+      box-sizing: border-box;
+      border: 10px solid red;
+      padding: 20px;
+    }
+    table{
+      border-spacing: 0px;
+    }
+    td,th{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    #tb4{
+      width: 50%;
+      height: 60px;
+      display: table;
+      border-collapse: collapse;
+    }
+    #tb4 .tr{
+      display: table-row;
+
+    }
+    #tb4 .td,#tb4 .th{
+      border: 1px solid orange;
+      display: table-cell;
+      padding: 10px;
+    }
+    #tb4 .th {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /*테이블 꾸미기*/
+    #tb5 {border-top: 3px solid black; border-bottom: 3px solid black;}
+    #tb5 th,#tb5 td{ padding: 10px 50px; border: 0}
+    #tb5 td{ text-align: center}
+    #tb5 tr:nth-child(even){
+      background-color: ivory;
+    }
+    #tb5 tr:nth-child(odd){
+      background-color: cornsilk;
+    }
+    #tb5:hover tr:hover{
+      color: #fff;
+       background-color: #b3d4fc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS float 관련속성</h1>
+  <h2>box-sizing 속성</h2>
+  <p>CSS테두리 영역의 크기를 결정하는 속성</p>
+  <p>일반적으로 블록 요소의 크기는 바깥여백 + 테두리 + 안쪽여백을 까지 계산되므로 실제 크기보다 더 커지게 되는 상황 발생하여 레이아웃이 엉망이 될수있음</p>
+  <img src="./img/contentbox.png" alt="블럭요소">
+
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  <div class="box5"></div>
+  <div class="box6"></div>
+
+  <h2>display속성으로 테이블 만들기</h2>
+  <p>display속성은 일반적으로 인라인요소나 블록요소를 변환해서 레이아웃을 구성하는데 사용</p>
+  <p>하지만, display속성에 table을 지정하면 블록요소가 테이블의 성질을 가지게 할 수 있음</p>
+  
+  <h5>일반테이블</h5>
+  <table>
+    <tr>
+      <td>123456789</td>
+      <td>123456789</td>
+      <td>123456789</td>
+    </tr>
+    <tr>
+      <td>123456789</td>
+      <td>123456789</td>
+      <td>123456789</td>
+    </tr>
+    <tr>
+      <td>123456789</td>
+      <td>123456789</td>
+      <td>123456789</td>
+    </tr>
+  </table>
+  
+  <h5>div테이블</h5>
+  <div id="tb4">
+    <div class="tr">
+      <div class="th">이름</div>
+      <div class="th">국어</div>
+      <div class="th">영어</div>
+      <div class="th">수학</div>
+    </div>
+    <div class="tr">
+      <div class="td">혜교</div>
+      <div class="td">99</div>
+      <div class="td">98</div>
+      <div class="td">99</div>
+    </div>
+  </div>
+  
+  <h2>테이블 예쁘게 꾸미기</h2>
+  <p>테이블 짝수행과 홀스행의 배경색을 다르게 지정 - 얼룩말, 스트라이프 무늬</p>
+  <p>hover클래스 선택자를 이용하여 현재행의 배경색을 다르게 표시</p>
+  <p>테이블 테두리도 행기준 아래쪽에만 표시 하도록 함</p>
+
+  <table id="tb5">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+    <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+    <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+    <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+    <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+    <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+    <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+    <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+    <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+  </table>
+
+
+  <p>한편,border-box속성을 이용하면 블록요소의 크기를 계산할 때 </p>
+
+  <h2>float속성</h2>
+
+
+
+</body>
+</html>
