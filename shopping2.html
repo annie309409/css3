@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    ul,h1,h2,h3,h4,h5,h6{ list-style: none;margin: 0;padding: 0;}
+    .hdrWrap header {
+      width: 90%;
+      max-width: 1080px;
+      min-width: 807px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .hdrLeft{
+      float: left;
+      width: 50%;
+    }
+    .hdrLeft h1{
+      float: left;
+      width: 120px;
+      line-height: 80px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #cccccc;
+    }
+    .hdrLeft h4{
+      width: 50%;
+      margin-left: 20px;
+      float: left;
+      padding-top: 40px;
+      line-height: 40px;
+    }
+    .hdrWrap header nav{
+      float: right;
+      width: 50%;
+    }
+    .hdrWrap header nav h4{
+      float: right;
+      margin-left: 20px;
+      line-height: 80px;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    .srhWrap{
+      background-color: #cccccc;
+    }
+    .search{
+      width: 90%;
+      max-width: 1080px;
+      min-width: 807px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .search button{
+      width: 20%;
+      line-height: 23px;
+      border: 0px;
+      background-color: #333333;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .search select {
+      width: 20%;
+    }
+    .search input{
+      width: 30%;
+    }
+    .mnWrap{
+      margin-top: 20px;
+    }
+    .mnWrap .mnGr{
+      width: 90%;
+      max-width: 1080px;
+      min-width: 807px;
+      margin: 0 auto;
+    }
+    .mnWrap aside{
+      width: 20%;
+      line-height: 40px;
+      text-align: center;
+      text-transform: capitalize;
+      float: left;
+      box-sizing: border-box;
+    }
+    .mnWrap aside h4{
+      border-top: 1px solid black;
+    }
+    .mnWrap aside h4,.mnWrap aside li{
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      width: 100%;
+    }
+    .mnGr main{
+      width: calc(80% - 20px);
+      height: 288px;
+      overflow: hidden;
+      float: right;
+      position: relative;
+    }
+    .mnGr main .pg{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+    .mnGr main .pg li{
+      float: left;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      margin-left: 5px;
+      text-align: center;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    main img{
+      width: 100%;
+    }
+    
+    .cntWrap{
+      margin-top: 20px;
+    }
+    .content{
+      width: 90%;
+      max-width: 1080px;
+      margin: 0 auto;
+      min-width: 807px;
+    }
+    .content header{
+      line-height: 40px;
+    }
+    section{
+      width: 95%;
+      margin: 20px auto 0;
+    }
+    section article{
+      width: calc(100% / 6 - 20px);
+      float: left;
+      margin: 0px 10px;
+    }
+    article .image{
+      background-color: #eee;
+      height: 100px;
+      border-radius: 20px;
+    }
+    article h3{
+      line-height: 40px;
+      text-transform: capitalize;
+      text-decoration: underline;
+      font-size: 16px;
+      text-align: center;
+    }
+    .ftrWrap{
+      margin-top: 40px;
+      border-top: 1px solid black;
+    }
+    footer{
+      width: 90%;
+      max-width: 1080px;
+      min-width: 807px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    footer nav{
+      width: calc(100% / 6 - 20px);
+      float: left;
+    }
+    footer nav h3{
+      text-transform: uppercase;
+      line-height: 40px;
+      font-size: 16px;
+    }
+    footer nav h4{
+      line-height: 30px;
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    
+
+  </style>
+</head>
+<body>
+<div class="hdrWrap">
+  <header class="clearfix">
+    <div class="hdrLeft clearfix">
+      <h1>logo</h1>
+      <h4><a href="">login</a> or <a href="">create account</a></h4>
+    </div>
+    <nav>
+      <h4>contact</h4>
+      <h4>store location</h4>
+      <h4>support</h4>
+      <h4>cart</h4>
+    </nav>
+  </header>
+</div>
+<div class="srhWrap">
+  <div class="search">
+    <form method="get">
+      <input type="text" name="srcName">
+      <select name="categoris" id="categories">
+        <option value="cat1">category</option>
+        <option value="cat2">caregory1</option>
+        <option value="cat3">caregory2</option>
+        <option value="cat4">caregory3</option>
+        <option value="cat5">caregory4</option>
+        <option value="cat6">caregory5</option>
+      </select>
+      <button type="submit">search</button>
+    </form>
+  </div>
+</div>
+<div class="mnWrap">
+  <div class="mnGr clearfix">
+    <aside>
+      <h4>all categories</h4>
+      <ul>
+        <li>caregory1</li>
+        <li>caregory2</li>
+        <li>caregory3</li>
+        <li>caregory4</li>
+        <li>caregory5</li>
+        <li>caregory6</li>
+      </ul>
+    </aside>
+    <main>
+      <ul class="mnGroup">
+        <li><img src="img/main01.jpg" alt=""></li>
+        <li><img src="img/main02.jpg" alt=""></li>
+        <li><img src="img/main03.jpg" alt=""></li>
+        <li><img src="img/main04.jpg" alt=""></li>
+      </ul>
+      <ul class="pg">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </main>
+  </div>
+</div>
+<div class="cntWrap">
+  <div class="content">
+    <header>
+      <h2>today's topic</h2>
+    </header>
+    <section class="clearfix">
+      <article>
+        <div class="image"></div>
+        <h3>product1</h3>
+      </article>
+      <article>
+        <div class="image"></div>
+        <h3>product2</h3>
+      </article>
+      <article>
+        <div class="image"></div>
+        <h3>product3</h3>
+      </article>
+      <article>
+        <div class="image"></div>
+        <h3>product4</h3>
+      </article>
+      <article>
+        <div class="image"></div>
+        <h3>product5</h3>
+      </article>
+      <article>
+        <div class="image"></div>
+        <h3>product6</h3>
+      </article>
+    </section>
+  </div>
+</div>
+
+<div class="ftrWrap">
+  <footer class="clearfix">
+    <nav>
+      <h3>about us</h3>
+      <h4>company</h4>
+      <h4>news</h4>
+      <h4>jobs</h4>
+      <h4>police</h4>
+      <h4>contact</h4>
+    </nav>
+    <nav>
+      <h3>social</h3>
+      <h4>facebook</h4>
+      <h4>twitter</h4>
+      <h4>try our app</h4>
+    </nav>
+    <nav>
+      <h3>service</h3>
+      <h4>FAQ</h4>
+      <h4>live support</h4>
+      <h4>stie map</h4>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
